@@ -20,6 +20,8 @@ public class HbaseUtil {
      */
     public static Configuration getHbaseConfiguration() {
         Configuration configuration = HBaseConfiguration.create();
+        configuration.set(Constants.FS_DEFAULTFS,
+                ConfigurationManager.getProperty(Constants.FS_DEFAULTFS));
         configuration.set(Constants.HBASE_ZOOKEEPER_QUORUM,
                 ConfigurationManager.getProperty(Constants.HBASE_ZOOKEEPER_QUORUM));
         return configuration;

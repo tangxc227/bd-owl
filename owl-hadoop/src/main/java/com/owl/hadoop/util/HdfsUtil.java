@@ -1,5 +1,7 @@
 package com.owl.hadoop.util;
 
+import com.owl.hadoop.configuration.ConfigurationManager;
+import com.owl.hadoop.constant.Constants;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -21,7 +23,8 @@ public class HdfsUtil {
      */
     public static Configuration getConfiguration() {
         Configuration configuration = new Configuration();
-        configuration.set("fs.defaultFS", "hdfs://127.0.0.1:8020");
+        configuration.set(Constants.FS_DEFAULTFS,
+                ConfigurationManager.getProperty(Constants.FS_DEFAULTFS));
         return configuration;
     }
 
