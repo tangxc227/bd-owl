@@ -9,5 +9,9 @@
             <generator class="uuid"/>
         </id>
         <property name="name" />
+        <set name="emps" cascade="save-update" lazy="extra">
+            <key column="dept_id" />
+            <one-to-many class="Employee" />
+        </set>
     </class>
 </hibernate-mapping>

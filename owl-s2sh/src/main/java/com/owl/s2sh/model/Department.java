@@ -1,5 +1,7 @@
 package com.owl.s2sh.model;
 
+import java.util.Set;
+
 /**
  * @Author: tangxc
  * @Description:
@@ -10,6 +12,7 @@ public class Department {
 
     private String id;
     private String name;
+    private Set<Employee> emps;
 
     public String getId() {
         return id;
@@ -27,4 +30,11 @@ public class Department {
         this.name = name;
     }
 
+    public Set<Employee> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(Set<Employee> emps) {
+        this.emps = emps;
+    }
 }

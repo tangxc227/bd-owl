@@ -13,6 +13,7 @@ public class Employee {
     private String password;
     private String nickname;
     private double salary;
+    private Department department;
 
     public Employee() {
     }
@@ -63,4 +64,13 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
 }
